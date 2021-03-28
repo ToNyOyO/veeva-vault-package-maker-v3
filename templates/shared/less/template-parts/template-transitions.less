@@ -1,0 +1,107 @@
+// animation keyframes
+@keyframes fade-from-grey {
+  0% {
+    -webkit-filter: grayscale(100%);
+  }
+  100% {
+    -webkit-filter: grayscale(0%);
+  }
+}
+
+@keyframes fade-from-grey-with-blur {
+  0% {
+    -webkit-filter: grayscale(100%) blur(5px);
+  }
+  30% {
+    -webkit-filter: grayscale(85%) blur(0);
+  }
+  100% {
+    -webkit-filter: grayscale(0%) blur(0);
+  }
+}
+
+@keyframes fade-from-grey-with-blur-and-opacity {
+  0% {
+    opacity:0;
+    -webkit-filter: grayscale(100%) blur(5px);
+  }
+  30% {
+    opacity:1;
+    -webkit-filter: grayscale(100%) blur(2px);
+  }
+  50% {
+    opacity:1;
+    -webkit-filter: grayscale(85%) blur(0);
+  }
+  100% {
+    opacity:1;
+    -webkit-filter: grayscale(0%) blur(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(101%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeftOpacity {
+  0% {
+    opacity: 0;
+    transform: translateX(-1%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRightOpacity {
+  0% {
+    opacity: 0;
+    transform: translateX(101%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0, 100;
+  }
+}
+
+@keyframes scale-and-bounce {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

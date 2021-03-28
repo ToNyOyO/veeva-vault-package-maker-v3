@@ -1,0 +1,90 @@
+@import "../colors.less";
+@import "../fonts.less";
+@import "../variables.less";
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+
+  &.smaller {
+    th, td {
+      font-size: 85%;//0.85rem;
+      line-height: 150%;//1.5rem;
+    }
+  }
+  &.evenSmaller {
+    th, td {
+      font-size: 80%;//0.8rem;
+      line-height: 143%;//1.43rem;
+    }
+  }
+  &.crazySmall {
+    th, td {
+      font-size: 70%;//0.7rem;
+      line-height: 130%;//1.3rem;
+    }
+  }
+  &.center {
+    th, td {
+      text-align: center;
+    }
+  }
+
+  &.w95 {width: 95%;}
+  &.w80 {width: 80%;}
+
+  tr.alt {
+    td {
+      background-color: @primary-tint;
+    }
+  }
+  td, th {
+    background-color: @primary;
+    color: white;
+    text-align: left;
+    padding: 4px 8px;
+    border: 1px solid white;
+    vertical-align: top;
+
+    &.w16pc {width: 16%;}
+    &.w17pc {width: 17%;}
+    &.w18pc {width: 18%;}
+    &.w22pc {width: 22%;}
+    &.w25pc {width: 25%;}
+    &.w33pc {width: 33%;}
+    &.w50pc {width: 50%;}
+
+    &.left {
+      text-align: left;
+    }
+    &.center {
+      text-align: center;
+    }
+
+    &.bgnd-transparent {
+      background-color: transparent;
+    }
+    &.bgnd-primary-tint-b {
+      background-color: @primary-tint-b;
+    }
+    &.color-primary {
+      color: @primary;
+    }
+    &.color-primary-tint-b {
+      color: @primary-tint-b;
+    }
+  }
+  td {
+    background-color: @quinary-tint-b;
+    color: @font-color;
+
+    &.alt {
+      background-color: @quinary-tint-c;
+    }
+  }
+  th span {
+    font-weight: 300;
+    text-transform: none;
+    color: @tertiary;
+  }
+}

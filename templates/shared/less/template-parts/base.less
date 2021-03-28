@@ -1,0 +1,252 @@
+@import "../colors.less";
+@import "../fonts.less";
+@import "../variables.less";
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  background-color: white;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin:0;
+  padding:0;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.1rem;
+
+  //background: url('../imgs/tmp-bgnd.jpg') center center no-repeat;
+  //background-size: cover;
+}
+// iPad Pro
+@media all and (device-width: @ipad-pro-width) and (device-height: @ipad-pro-height) and (orientation:landscape) {
+  body {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+}
+// Engage desktop large (1920 or thereabouts)
+@media all and (min-width: @engage-desktop-large-width) and (max-height: @engage-desktop-large-height) and (orientation:landscape) {
+  body {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+}
+svg {
+  pointer-events: none;
+}
+
+/*********************/
+/** POPUPS AND REFS **/
+/*********************/
+
+#page-content,
+.popup {
+
+  ul {
+    list-style: none;
+    padding-left: 17px;
+
+    li {
+      position: relative;
+      margin-bottom: 0.3rem;
+
+      &.mb0 {
+        margin-bottom:0;
+      }
+
+      &::before {
+        content: "•";
+        color: @secondary;
+        position: absolute;
+        --size: 17px;
+        left: calc(-1 * var(--size));
+
+        line-height: var(--size);
+        width: var(--size);
+        height: var(--size);
+
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      ul {
+        li:first-child {
+          margin-top: 0.3rem;
+        }
+      }
+    }
+
+    &.primary {
+      li {
+        &::before {
+          color: @primary;
+        }
+      }
+    }
+  }
+}
+
+#popup-overlay,
+#refs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  visibility: hidden;
+
+  background-color: black;
+  opacity: 0;
+
+  transition-delay: 2s;
+  transition: visibility 0.16s 0.5s, opacity 0.15s ease-in 0.5s;
+
+  &.show {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    visibility: visible;
+
+    opacity: 0.7;
+    transition: opacity 0.15s ease-out;
+  }
+}
+
+.popup {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 90%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: visibility 1s, opacity 0.5s ease-in;
+
+  div.popup-container {
+    position:relative;
+
+    background-color: white;
+    color: black;
+
+    width: 90%;
+
+    -webkit-border-radius: 3px;
+
+    h1 {}
+
+    small {
+      margin-top: 1rem;
+
+      font-weight: 400;
+      font-size: 0.55rem;
+      line-height: 0.68rem;
+      color: @quinary-tint;
+
+      a {
+        color: @quinary-tint;
+      }
+
+      strong {
+        color: @font-color-light;
+      }
+    }
+
+    &.video {
+      padding-top: 0.6rem;
+
+      div.content {
+        position: relative;
+        padding-top: 56.25%;
+        height: 0;
+
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &.audio {
+      padding-top: 0.6rem;
+
+      div.content {
+        position: relative;
+        padding-top: 56.25%;
+        height: 0;
+
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+
+        audio {
+          position: absolute;
+          top: 300px;
+        }
+      }
+    }
+
+    div.content {
+      margin: 2rem;
+
+      h2 {
+        color: @font-color;
+        margin-bottom: 1.5rem;
+      }
+
+      h3, h4 {}
+
+      p {}
+      ul {
+
+        li {}
+      }
+      h1 {
+        color: @font-color;
+        margin-bottom: 1.5rem;
+      }
+      ol {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 6rem 0 1rem;
+      }
+    }
+
+    .pop-close-button, .ref-close-button {
+      display: block;
+
+      position: absolute;
+      top: 12px;
+      right: 12px;
+
+      width: 35px;
+      height: 35px;
+
+      //background-color: red;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+
+    visibility: visible;
+    transition: opacity 1s ease-out 0.15s;
+  }
+}

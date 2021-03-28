@@ -1,0 +1,128 @@
+@import "colors.less";
+@import "fonts.less";
+
+@font-face {}
+
+////////////////////////////////////////////////////////////////////
+// headers etc.
+
+h1, h2, h3, h4, h5, h6, p, a, li, th, td, div, span {
+  -webkit-text-size-adjust: 100%;//none;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+body, p, li, a, u, th, td {
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.1rem;
+}
+
+p, li, th, td {
+  color: @font-color;
+
+  sup {
+    font-size: 62%;
+    line-height: 0.5rem;
+    top: -0.65em;
+  }
+}
+a {
+  color: @font-color;
+}
+
+sup {
+  //top: -0.85em;
+}
+
+ul {}
+
+td {
+  font-size: 0.95rem;
+}
+
+th {
+  //letter-spacing: 0.08rem;
+}
+
+small {
+  display: block;
+
+  strong {
+    font-weight: 700;
+  }
+
+  sup {
+    font-size: 72%;
+    line-height: 0.5rem;
+    top: -0.5em;
+  }
+}
+small, small a, small u {
+  font-size: 0.6rem;
+  line-height: 0.7rem;
+}
+
+ul, ol {
+  li {
+
+    span {
+      font-weight: 400;
+    }
+  }
+}
+
+b, strong, th {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+h1 {
+  color: @quinary;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+
+  sup {
+    font-size: 0.9rem;
+    line-height: 0.8rem;
+    top: -0.65em;
+  }
+}
+
+h2 {
+  color: @primary-tint-b;
+  font-size: 1.35rem;
+
+  sup {
+    font-size: 52%;
+    line-height: 0.7rem;
+    top: -0.75em;
+  }
+
+  &:first-child {
+    //margin-top: 0;
+  }
+}
+
+h3, h4 {
+  color: @secondary;
+  font-size: 0.96rem;
+
+  margin-top: 1rem;
+
+  sup {
+    font-size: 52%;
+    line-height: 0.45rem;
+    top: -0.65em;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

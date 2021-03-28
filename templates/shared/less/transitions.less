@@ -1,0 +1,21 @@
+/*** ADD GENERIC ANIMATIONS HERE ***/
+
+/* THESE WILL OVERRIDE YOUR STUFF IN USER IS NOT ENGAGE */
+
+#page-content {
+  /* implement global transitions */
+  *.fadeAndSlide:not(section):not(div) {
+    // duration | timing-function | delay | iteration-count | frames
+    animation: 0.8s ease-out 0.15s 1 forwards slideInFromLeftOpacity;
+  }
+
+  section.fadeAndSlide,
+  div.fadeAndSlide {
+
+    *:not(img):not(.static) {
+      // duration | timing-function | delay | iteration-count | frames
+      animation: 0.8s ease-out 0.15s 1 forwards slideInFromLeftOpacity;
+    }
+  }
+  /* END: implement global transitions */
+}

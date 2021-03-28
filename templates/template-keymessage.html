@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- INSERT CSS HERE  -->
+    <!-- INSERT CSS ANIMS HERE  -->
+</head>
+<body id="ADD PAGE ID HERE">
+
+
+<!-- header -->
+<header class="single-line">
+    <!-- ADD HEADER CONTENT HERE -->
+</header>
+<!-- END: header -->
+
+
+<!-------------------------------- PAGE -------------------------------->
+<article id="page-content">
+    <!-- ADD PAGE CONTENT HERE -->
+
+    <a href="#" class="popup-link" data-popup-id="popup-1">popup link test</a> | <a href="#" class="popup-link" data-popup-id="popup-2">popup link test</a>
+
+    <!-- footnotes -->
+    <section id="page-footnotes">
+        <!-- INSERT PAGE FOOTNOTES HERE -->
+    </section>
+    <!-- END: footnotes -->
+</article>
+<!-------------------------------- END --------------------------------->
+
+
+<!-- footer -->
+<footer>
+    <!-- YOU CAN ADD LOGO OR LINKS TO PI/REFS HERE -->
+    <img class="home-link goTo-Homepage" alt="" src="./shared/imgs/icon-home.svg" />
+    <img class="refs-link" alt="" src="./shared/imgs/icon-refs.svg" />
+    <img class="pi-link goTo-PrescribingInformation" alt="" src="./shared/imgs/icon-pi.svg" />
+
+    <section>
+        <!--ADD SOME FOOTNOTES HERE<br/>
+        <small class="mt03">And some smaller notes here</small>-->
+    </section>
+
+    <img class="logo" alt="" src="./shared/imgs/logo-BRAND.svg" />
+</footer>
+<!-- END: footer -->
+
+
+<!-- nav -->
+<nav>
+    <!-- INSERT NAV HERE  -->
+</nav>
+<!-- END: nav -->
+
+
+<div id="popup-overlay" class=""></div>
+<!-- popup 1 -->
+<div id="popup-1" class="popup">
+    <div class="popup-container">
+        <img class="pop-close-button" alt="" src="./shared/imgs/btn-close.svg" />
+
+        <div class="content">
+            <h1>A heading<sup>1&ndash;3</sup></h1>
+
+            <small>Small text</small>
+        </div>
+    </div>
+</div>
+
+<!-- popup 2 -->
+<div id="popup-2" class="popup">
+    <div class="popup-container">
+        <img class="pop-close-button" alt="" src="./shared/imgs/btn-close.svg" />
+
+        <div class="content">
+            <h1>A heading<sup>1&ndash;3</sup></h1>
+
+            <small>Small text</small>
+        </div>
+    </div>
+</div>
+
+<div id="refs-overlay" class=""></div>
+
+<!-- references -->
+<div id="references" class="popup">
+    <div class="popup-container">
+        <img class="ref-close-button" alt="" src="./shared/imgs/btn-close.svg" />
+
+        <div class="content">
+            <h1>References:</h1>
+            <ol>
+                <li>for example...</li>
+                <li>for example...</li>
+            </ol>
+            <ol start="3">
+                <li>for example...</li>
+                <li>for example...</li>
+            </ol>
+            <ol start="7">
+                <li>for example...</li>
+                <li>for example...</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- END: references -->
+
+</body>
+<script src="./shared/js/veeva-library.min.js"></script>
+<script src="./shared/js/jquery-3.3.1.min.js"></script>
+<!-- INSERT JS HERE  -->
+<script>
+    highlightNav('.goTo-ADD PAGE ID HERE');
+</script>
+</html>

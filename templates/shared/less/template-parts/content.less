@@ -1,0 +1,73 @@
+@import "../colors.less";
+@import "../fonts.less";
+@import "../variables.less";
+
+/*** GLOBAL CONTENT ***/
+
+#page-content {
+  position: absolute;
+  top: @nav-h;
+  right:0;
+  bottom: @footer-h;
+  left:0;
+
+  width: 100% - (@left-pad + @right-pad);
+
+  padding: 5% @left-pad 0 @right-pad;
+
+  overflow: hidden;
+
+
+  /* implement global transitions */
+  *.fadeAndSlide:not(section):not(div) {
+    opacity: 0;
+    transform: translateX(-1.5%);
+
+    // duration | timing-function | delay | iteration-count | frames
+    animation: 0s linear 0.15s 1 forwards slideInFromLeftOpacity;
+  }
+
+  section.fadeAndSlide,
+  div.fadeAndSlide {
+
+    *:not(img):not(.static) {
+      opacity: 0;
+      transform: translateX(-1.5%);
+
+      // duration | timing-function | delay | iteration-count | frames
+      animation: 0s linear 0.15s 1 forwards slideInFromLeftOpacity;
+    }
+  }
+  /* END: implement global transitions */
+
+
+  ///// ADD YOUR STUFF HERE /////
+
+  br.soft {
+    display: inline-block;
+  }
+  br.engage {
+    display: none;
+  }
+
+  // Engage Desktop // Engage desktop large (1920 or thereabouts)
+  @media all and (min-width: @engage-desktop-width) and (max-height: @engage-desktop-height) and (orientation:landscape),
+         all and (min-width: @engage-desktop-large-width) and (max-height: @engage-desktop-large-height) and (orientation:landscape) {
+
+    br.soft {
+      display: none;
+    }
+    br.engage {
+      display: inline-block;
+    }
+  }
+
+  // Engage desktop large (1920 or thereabouts)
+  @media all and (min-width: @engage-desktop-large-width) and (max-height: @engage-desktop-large-height) and (orientation:landscape) {}
+
+  // iPad Pro
+  @media all and (device-width: @ipad-pro-width) and (device-height: @ipad-pro-height) and (orientation:landscape) {}
+
+  // in theory this is Win Desktop
+  @media (max-resolution: 1dppx) {}
+}

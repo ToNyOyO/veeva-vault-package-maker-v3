@@ -1,0 +1,108 @@
+@import "../colors.less";
+@import "../fonts.less";
+@import "../variables.less";
+
+/*** FOOTER ***/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: @footer-h;
+
+  background-color: white;
+  border-top: 3px solid @secondary;
+
+  img {
+    &.home-link, &.refs-link, &.pi-link, &.hc-link {
+      position: absolute;
+      left: 48px;
+      bottom: 12px;
+
+      //width: 28px;
+      height: 23px;
+    }
+    &.refs-link {
+      left: 88px;
+    }
+    &.pi-link {
+      left: 125px;
+    }
+    &.hc-link {
+      left: 162px;
+    }
+
+    &.logo {
+      position: absolute;
+      right: 22px;
+      bottom: 14px;
+
+      width: 102px;
+    }
+  }
+
+  section {
+    // Extra copy that sometimes appears in the footer
+
+    position: absolute;
+    left: 225px;
+    right: 190px;
+    bottom: 11px;
+
+    font-size: 0.875rem;
+    line-height: 1.1rem;
+
+    color: @quinary-tint;
+
+    font-family: 'Roboto';
+
+    small {
+      font-size: 0.56rem;
+    }
+
+    span {
+      color: black;
+    }
+  }
+
+  #pageCount {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 70px;
+    //left: 45%;
+    left: 40%;
+    right: 40%;
+
+    //width: 5%;
+    text-align: center;
+
+    font-size: 0.7rem;
+    //font-size: 1.137rem;
+    color: @tertiary;
+
+    //font-family: 'Gilroy W05 Light';
+
+    div {
+      float: left;
+
+      background-color: @tertiary;
+
+      width: 7px;
+      height: 7px;
+
+      margin: 0 4px;
+
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+
+      &.active {
+        background-color: @primary;
+      }
+    }
+  }
+}
